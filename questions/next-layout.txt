@@ -1,0 +1,121 @@
+1:"$Sreact.fragment"
+2:I[7028,[],""]
+3:I[1698,[],""]
+5:I[8948,[],"MetadataBoundary"]
+7:I[8948,[],"OutletBoundary"]
+a:I[2140,[],"AsyncMetadataOutlet"]
+c:I[8948,[],"ViewportBoundary"]
+e:I[1051,[],""]
+:HL["/web3-interview-blog/_next/static/css/f9620fcb66fda72c.css","style"]
+0:{"P":null,"b":"gnMCCm9gVkT0ZI_uSNvru","p":"/web3-interview-blog","c":["","questions","next-layout"],"i":false,"f":[[["",{"children":["questions",{"children":[["id","next-layout","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/web3-interview-blog/_next/static/css/f9620fcb66fda72c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"children":["$","div",null,{"className":"min-h-screen bg-gray-50","children":[["$","header",null,{"className":"bg-white shadow","children":["$","div",null,{"className":"max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8","children":[["$","h1",null,{"className":"text-3xl font-bold text-gray-900","children":"Web3 前端面试题库"}],["$","p",null,{"className":"mt-1 text-gray-600","children":"开源的 Web3 前端开发面试题集合"}]]}]}],["$","main",null,{"className":"max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-white border-t border-gray-200 py-8","children":["$","div",null,{"className":"max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500","children":[["$","p",null,{"children":["© ",2025," Web3 前端面试题库 | 由社区共建"]}],["$","p",null,{"className":"mt-2","children":["$","a",null,{"href":"https://github.com/yourusername/web3-interview-blog","className":"text-blue-500 hover:text-blue-700","children":"GitHub 仓库"}]}]]}]}]]}]}]}]]}],{"children":["questions",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","next-layout","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",["$","$L5",null,{"children":"$L6"}],null,["$","$L7",null,{"children":["$L8","$L9",["$","$La",null,{"promise":"$@b"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","m_NZ7SdwYdTWG1TJsGh5J",{"children":[["$","$Lc",null,{"children":"$Ld"}],null]}],null]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+f:"$Sreact.suspense"
+10:I[2140,[],"AsyncMetadata"]
+6:["$","$f",null,{"fallback":null,"children":["$","$L10",null,{"promise":"$@11"}]}]
+9:null
+13:I[1685,["685","static/chunks/685-0232ea0b128e2dcf.js","202","static/chunks/app/questions/%5Bid%5D/page-561ad6f71989f705.js"],""]
+12:Ta1b,<h1>Next.js App Router 中 Layout 的最佳实践</h1>
+<h2>架构设计</h2>
+<ol>
+<li>
+<p><strong>布局分层</strong></p>
+<ul>
+<li>根布局：全局 UI 元素、主题配置</li>
+<li>功能布局：按功能区域划分（认证区域、管理区域）</li>
+<li>页面布局：特定页面组结构</li>
+</ul>
+</li>
+<li>
+<p><strong>职责划分</strong></p>
+<ul>
+<li>每个布局职责单一</li>
+<li>避免过深嵌套（通常不超过 3-4 层）</li>
+<li>将共享状态放在适当的布局层级</li>
+</ul>
+</li>
+</ol>
+<h2>性能优化</h2>
+<ol>
+<li>
+<p><strong>组件分割</strong></p>
+<ul>
+<li>将布局拆分为更小的组件</li>
+<li>避免大型单体布局文件</li>
+<li>利用 React.memo 减少不必要渲染</li>
+</ul>
+</li>
+<li>
+<p><strong>数据获取</strong></p>
+<ul>
+<li>在合适的布局层级获取数据</li>
+<li>利用平行数据获取</li>
+<li>使用缓存和重验证策略</li>
+</ul>
+</li>
+<li>
+<p><strong>加载策略</strong></p>
+<ul>
+<li>实现 loading.js 提供加载状态</li>
+<li>考虑使用 Suspense 边界细分加载区域</li>
+<li>为关键布局元素预先加载数据</li>
+</ul>
+</li>
+</ol>
+<h2>状态管理</h2>
+<ol>
+<li>
+<p><strong>客户端 vs 服务端</strong></p>
+<ul>
+<li>默认保持为服务端组件</li>
+<li>只在需要交互时添加"use client"</li>
+<li>将客户端逻辑隔离到子组件</li>
+</ul>
+</li>
+<li>
+<p><strong>共享状态</strong></p>
+<ul>
+<li>Context Provider 放置在适当布局层级</li>
+<li>考虑使用第三方状态库（Zustand 等）</li>
+<li>避免过度共享导致不必要渲染</li>
+</ul>
+</li>
+</ol>
+<h2>实用建议</h2>
+<ol>
+<li>
+<p><strong>路由组织</strong></p>
+<ul>
+<li>使用 Route Groups <code>(folder)</code>隔离布局</li>
+<li>利用<code>layout.js</code>和<code>template.js</code>的区别</li>
+<li>善用<code>not-found.js</code>和<code>error.js</code></li>
+</ul>
+</li>
+<li>
+<p><strong>跨布局通信</strong></p>
+<ul>
+<li>使用 URL 参数传递简单状态</li>
+<li>优先考虑服务端状态而非客户端状态</li>
+<li>需要时使用 localStorage/cookie 存储持久数据</li>
+</ul>
+</li>
+<li>
+<p><strong>响应式设计</strong></p>
+<ul>
+<li>布局组件使用响应式设计</li>
+<li>考虑使用 CSS Grid 或 Flexbox</li>
+<li>使用<code>useMediaQuery</code>或 CSS 媒体查询适配不同设备</li>
+</ul>
+</li>
+<li>
+<p><strong>代码组织</strong></p>
+<ul>
+<li>将复杂布局提取到<code>/components</code>目录</li>
+<li>使用<code>/lib</code>存放布局相关工具函数</li>
+<li>布局样式使用模块化 CSS 或样式库</li>
+</ul>
+</li>
+</ol>
+4:["$","article",null,{"className":"bg-white shadow rounded-lg p-6","children":[["$","h1",null,{"className":"text-2xl md:text-3xl font-bold text-gray-900 mb-4","children":"使用Next.js的App Router开发时，layout的最佳实践"}],["$","div",null,{"className":"flex justify-between items-center mb-6 pb-4 border-b","children":[["$","time",null,{"dateTime":"2025-05-06","children":"2025年05月06日"}],["$","div",null,{"className":"flex flex-wrap gap-2","children":[["$","span","Next.js",{"className":"text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full","children":"Next.js"}]]}]]}],["$","div",null,{"className":"prose max-w-none","dangerouslySetInnerHTML":{"__html":"$12"}}],["$","div",null,{"className":"mt-8 pt-4 border-t","children":["$","$L13",null,{"href":"/","className":"flex items-center text-blue-500 hover:text-blue-700","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"16","height":"16","fill":"currentColor","className":"mr-2","viewBox":"0 0 16 16","children":["$","path",null,{"fillRule":"evenodd","d":"M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"}]}],"返回首页"]}]}]]}]
+d:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+8:null
+11:{"metadata":[["$","title","0",{"children":"使用Next.js的App Router开发时，layout的最佳实践"}],["$","meta","1",{"name":"description","content":"使用Next.js的App Router开发时，layout的最佳实践 - Web3 前端面试题库"}],["$","link","2",{"rel":"icon","href":"/web3-interview-blog/favicon.ico","type":"image/x-icon","sizes":"16x16"}]],"error":null,"digest":"$undefined"}
+b:{"metadata":"$11:metadata","error":null,"digest":"$undefined"}

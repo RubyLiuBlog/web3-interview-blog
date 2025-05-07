@@ -1,0 +1,90 @@
+1:"$Sreact.fragment"
+2:I[7028,[],""]
+3:I[1698,[],""]
+5:I[8948,[],"MetadataBoundary"]
+7:I[8948,[],"OutletBoundary"]
+a:I[2140,[],"AsyncMetadataOutlet"]
+c:I[8948,[],"ViewportBoundary"]
+e:I[1051,[],""]
+:HL["/web3-interview-blog/_next/static/css/f9620fcb66fda72c.css","style"]
+0:{"P":null,"b":"gnMCCm9gVkT0ZI_uSNvru","p":"/web3-interview-blog","c":["","questions","js-array-deduplication"],"i":false,"f":[[["",{"children":["questions",{"children":[["id","js-array-deduplication","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/web3-interview-blog/_next/static/css/f9620fcb66fda72c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"children":["$","div",null,{"className":"min-h-screen bg-gray-50","children":[["$","header",null,{"className":"bg-white shadow","children":["$","div",null,{"className":"max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8","children":[["$","h1",null,{"className":"text-3xl font-bold text-gray-900","children":"Web3 前端面试题库"}],["$","p",null,{"className":"mt-1 text-gray-600","children":"开源的 Web3 前端开发面试题集合"}]]}]}],["$","main",null,{"className":"max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-white border-t border-gray-200 py-8","children":["$","div",null,{"className":"max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500","children":[["$","p",null,{"children":["© ",2025," Web3 前端面试题库 | 由社区共建"]}],["$","p",null,{"className":"mt-2","children":["$","a",null,{"href":"https://github.com/yourusername/web3-interview-blog","className":"text-blue-500 hover:text-blue-700","children":"GitHub 仓库"}]}]]}]}]]}]}]}]]}],{"children":["questions",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","js-array-deduplication","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",["$","$L5",null,{"children":"$L6"}],null,["$","$L7",null,{"children":["$L8","$L9",["$","$La",null,{"promise":"$@b"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","ETn5EY4euFaZlqwH3cI2W",{"children":[["$","$Lc",null,{"children":"$Ld"}],null]}],null]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+f:"$Sreact.suspense"
+10:I[2140,[],"AsyncMetadata"]
+6:["$","$f",null,{"fallback":null,"children":["$","$L10",null,{"promise":"$@11"}]}]
+9:null
+13:I[1685,["685","static/chunks/685-0232ea0b128e2dcf.js","202","static/chunks/app/questions/%5Bid%5D/page-561ad6f71989f705.js"],""]
+12:Td6d,<h3><strong>JavaScript 数组去重方法总结</strong></h3>
+<h4><strong>1. 使用 <code>Set</code>（ES6 最简单方式）</strong></h4>
+<pre><code class="language-javascript">const arr = [1, 2, 2, 3, 4, 4];
+const uniqueArr = [...new Set(arr)]; // [1, 2, 3, 4]
+</code></pre>
+<ul>
+<li><strong>优点</strong>：代码简洁，性能较好。</li>
+<li><strong>缺点</strong>：无法处理对象引用去重（<code>Set</code> 认为 <code>{} !== {}</code>）。</li>
+</ul>
+<h4><strong>2. <code>filter</code> + <code>indexOf</code>（ES5 兼容）</strong></h4>
+<pre><code class="language-javascript">const arr = [1, 2, 2, 3, 4, 4];
+const uniqueArr = arr.filter((item, index) => arr.indexOf(item) === index);
+</code></pre>
+<ul>
+<li><strong>优点</strong>：兼容旧浏览器。</li>
+<li><strong>缺点</strong>：时间复杂度 O(n²)，性能较差（大数组不推荐）。</li>
+</ul>
+<h4><strong>3. <code>reduce</code> 去重</strong></h4>
+<pre><code class="language-javascript">const arr = [1, 2, 2, 3, 4, 4];
+const uniqueArr = arr.reduce(
+  (acc, cur) => (acc.includes(cur) ? acc : [...acc, cur]),
+  []
+);
+</code></pre>
+<ul>
+<li><strong>优点</strong>：灵活，可结合复杂逻辑。</li>
+<li><strong>缺点</strong>：每次迭代创建新数组（性能一般）。</li>
+</ul>
+<h4><strong>4. 对象键值去重（适用于基本类型）</strong></h4>
+<pre><code class="language-javascript">const arr = [1, 2, 2, 3, 4, 4];
+const uniqueArr = Object.keys(
+  arr.reduce((acc, cur) => ((acc[cur] = true), acc), {})
+).map(Number); // 注意：键会被转为字符串
+</code></pre>
+<ul>
+<li><strong>优点</strong>：一次遍历，性能较好。</li>
+<li><strong>缺点</strong>：仅适用于可转为字符串的值（如数字、字符串）。</li>
+</ul>
+<h4><strong>5. 对象数组去重（按属性）</strong></h4>
+<pre><code class="language-javascript">const arr = [{ id: 1 }, { id: 2 }, { id: 1 }];
+const uniqueArr = arr.filter(
+  (item, index, self) => index === self.findIndex((obj) => obj.id === item.id)
+);
+</code></pre>
+<ul>
+<li><strong>适用场景</strong>：根据对象某个属性（如 <code>id</code>）去重。</li>
+<li><strong>缺点</strong>：<code>findIndex</code> 嵌套导致性能较差（大数组慎用）。</li>
+</ul>
+<h4><strong>6. <code>Map</code> 去重（支持对象引用）</strong></h4>
+<pre><code class="language-javascript">const arr = [{ id: 1 }, { id: 2 }, { id: 1 }];
+const map = new Map();
+arr.forEach((item) => map.set(item.id, item)); // 按 id 去重
+const uniqueArr = [...map.values()];
+</code></pre>
+<ul>
+<li><strong>优点</strong>：高性能，支持复杂对象。</li>
+</ul>
+<hr>
+<h3><strong>性能对比（大数组优先选 <code>Set</code> 或 <code>Map</code>）</strong></h3>
+<p>| 方法               | 时间复杂度 | 适用场景           |
+| ------------------ | ---------- | ------------------ |
+| <code>Set</code>              | O(n)       | 基本类型去重       |
+| <code>Map</code>              | O(n)       | 对象按属性去重     |
+| <code>filter</code>+<code>indexOf</code> | O(n²)      | 小数组或兼容性场景 |</p>
+<p><strong>推荐选择</strong>：</p>
+<ul>
+<li><strong>简单数组</strong> → <code>[...new Set(arr)]</code></li>
+<li><strong>对象数组</strong> → <code>Map</code> 或 <code>reduce</code> + 属性判断</li>
+<li><strong>兼容旧环境</strong> → <code>filter</code> + <code>indexOf</code></li>
+</ul>
+4:["$","article",null,{"className":"bg-white shadow rounded-lg p-6","children":[["$","h1",null,{"className":"text-2xl md:text-3xl font-bold text-gray-900 mb-4","children":"JS 数组去重有哪些方式"}],["$","div",null,{"className":"flex justify-between items-center mb-6 pb-4 border-b","children":[["$","time",null,{"dateTime":"2025-05-06","children":"2025年05月06日"}],["$","div",null,{"className":"flex flex-wrap gap-2","children":[["$","span","JavaScript",{"className":"text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full","children":"JavaScript"}]]}]]}],["$","div",null,{"className":"prose max-w-none","dangerouslySetInnerHTML":{"__html":"$12"}}],["$","div",null,{"className":"mt-8 pt-4 border-t","children":["$","$L13",null,{"href":"/","className":"flex items-center text-blue-500 hover:text-blue-700","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"16","height":"16","fill":"currentColor","className":"mr-2","viewBox":"0 0 16 16","children":["$","path",null,{"fillRule":"evenodd","d":"M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"}]}],"返回首页"]}]}]]}]
+d:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+8:null
+11:{"metadata":[["$","title","0",{"children":"JS 数组去重有哪些方式"}],["$","meta","1",{"name":"description","content":"JS 数组去重有哪些方式 - Web3 前端面试题库"}],["$","link","2",{"rel":"icon","href":"/web3-interview-blog/favicon.ico","type":"image/x-icon","sizes":"16x16"}]],"error":null,"digest":"$undefined"}
+b:{"metadata":"$11:metadata","error":null,"digest":"$undefined"}

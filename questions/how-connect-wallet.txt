@@ -1,0 +1,117 @@
+1:"$Sreact.fragment"
+2:I[7028,[],""]
+3:I[1698,[],""]
+5:I[8948,[],"MetadataBoundary"]
+7:I[8948,[],"OutletBoundary"]
+a:I[2140,[],"AsyncMetadataOutlet"]
+c:I[8948,[],"ViewportBoundary"]
+e:I[1051,[],""]
+:HL["/web3-interview-blog/_next/static/css/f9620fcb66fda72c.css","style"]
+0:{"P":null,"b":"gnMCCm9gVkT0ZI_uSNvru","p":"/web3-interview-blog","c":["","questions","how-connect-wallet"],"i":false,"f":[[["",{"children":["questions",{"children":[["id","how-connect-wallet","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/web3-interview-blog/_next/static/css/f9620fcb66fda72c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"children":["$","div",null,{"className":"min-h-screen bg-gray-50","children":[["$","header",null,{"className":"bg-white shadow","children":["$","div",null,{"className":"max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8","children":[["$","h1",null,{"className":"text-3xl font-bold text-gray-900","children":"Web3 前端面试题库"}],["$","p",null,{"className":"mt-1 text-gray-600","children":"开源的 Web3 前端开发面试题集合"}]]}]}],["$","main",null,{"className":"max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-white border-t border-gray-200 py-8","children":["$","div",null,{"className":"max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500","children":[["$","p",null,{"children":["© ",2025," Web3 前端面试题库 | 由社区共建"]}],["$","p",null,{"className":"mt-2","children":["$","a",null,{"href":"https://github.com/yourusername/web3-interview-blog","className":"text-blue-500 hover:text-blue-700","children":"GitHub 仓库"}]}]]}]}]]}]}]}]]}],{"children":["questions",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","how-connect-wallet","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",["$","$L5",null,{"children":"$L6"}],null,["$","$L7",null,{"children":["$L8","$L9",["$","$La",null,{"promise":"$@b"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","FbdG78b06BdZhwPzTLLqP",{"children":[["$","$Lc",null,{"children":"$Ld"}],null]}],null]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+f:"$Sreact.suspense"
+10:I[2140,[],"AsyncMetadata"]
+6:["$","$f",null,{"fallback":null,"children":["$","$L10",null,{"promise":"$@11"}]}]
+9:null
+13:I[1685,["685","static/chunks/685-0232ea0b128e2dcf.js","202","static/chunks/app/questions/%5Bid%5D/page-561ad6f71989f705.js"],""]
+12:Tb58,<h2>概述</h2>
+<p>在 Web3 应用中，连接用户钱包是与区块链交互的第一步。本文介绍如何在 React 应用中实现钱包连接功能。</p>
+<h2>使用 ethers.js</h2>
+<pre><code class="language-typescript">import { ethers } from "ethers";
+import { useState, useEffect } from "react";
+
+const ConnectWallet = () => {
+  const [account, setAccount] = useState&#x3C;string | null>(null);
+  const [provider, setProvider] =
+    useState&#x3C;ethers.providers.Web3Provider | null>(null);
+
+  // 检查是否已安装 MetaMask
+  useEffect(() => {
+    const checkMetaMask = () => {
+      if (typeof window.ethereum !== "undefined") {
+        console.log("MetaMask 已安装!");
+      } else {
+        console.log("请安装 MetaMask!");
+      }
+    };
+
+    checkMetaMask();
+  }, []);
+
+  // 连接钱包
+  const connectWallet = async () => {
+    try {
+      // 请求用户授权
+      const accounts = await window.ethereum.request({
+        method: "eth_requestAccounts",
+      });
+
+      // 创建 ethers provider
+      const ethersProvider = new ethers.providers.Web3Provider(window.ethereum);
+
+      setAccount(accounts[0]);
+      setProvider(ethersProvider);
+
+      console.log("钱包连接成功:", accounts[0]);
+    } catch (error) {
+      console.error("连接钱包时出错:", error);
+    }
+  };
+
+  return (
+    &#x3C;div>
+      {account ? (
+        &#x3C;div>
+          &#x3C;p>已连接钱包: {account}&#x3C;/p>
+        &#x3C;/div>
+      ) : (
+        &#x3C;button
+          onClick={connectWallet}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          连接钱包
+        &#x3C;/button>
+      )}
+    &#x3C;/div>
+  );
+};
+
+export default ConnectWallet;
+</code></pre>
+<h2>处理账户切换和网络变化</h2>
+<p>MetaMask 提供了事件监听器，可以监听账户和网络的变化：</p>
+<pre><code class="language-typescript">useEffect(() => {
+  if (window.ethereum) {
+    // 监听账户变化
+    window.ethereum.on("accountsChanged", (accounts: string[]) => {
+      setAccount(accounts[0] || null);
+    });
+
+    // 监听链ID变化
+    window.ethereum.on("chainChanged", (chainId: string) => {
+      // 处理链ID变化，通常需要刷新页面
+      window.location.reload();
+    });
+  }
+
+  return () => {
+    // 清理监听器
+    if (window.ethereum) {
+      window.ethereum.removeListener("accountsChanged", () => {});
+      window.ethereum.removeListener("chainChanged", () => {});
+    }
+  };
+}, []);
+</code></pre>
+<h2>最佳实践</h2>
+<ol>
+<li>总是检查浏览器环境是否支持以太坊提供程序</li>
+<li>处理连接错误并向用户提供反馈</li>
+<li>使用状态管理库（如 Redux 或 Context API）在应用程序中共享钱包状态</li>
+<li>考虑支持多种钱包（MetaMask、WalletConnect 等）</li>
+<li>实现网络检测，确保用户连接到正确的网络</li>
+</ol>
+4:["$","article",null,{"className":"bg-white shadow rounded-lg p-6","children":[["$","h1",null,{"className":"text-2xl md:text-3xl font-bold text-gray-900 mb-4","children":"如何在 React 应用中实现钱包连接功能？"}],["$","div",null,{"className":"flex justify-between items-center mb-6 pb-4 border-b","children":[["$","time",null,{"dateTime":"2023-08-05","children":"2023年08月05日"}],["$","div",null,{"className":"flex flex-wrap gap-2","children":[["$","span","React",{"className":"text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full","children":"React"}],["$","span","钱包连接",{"className":"text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full","children":"钱包连接"}],["$","span","ethers.js",{"className":"text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full","children":"ethers.js"}]]}]]}],["$","div",null,{"className":"prose max-w-none","dangerouslySetInnerHTML":{"__html":"$12"}}],["$","div",null,{"className":"mt-8 pt-4 border-t","children":["$","$L13",null,{"href":"/","className":"flex items-center text-blue-500 hover:text-blue-700","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":"16","height":"16","fill":"currentColor","className":"mr-2","viewBox":"0 0 16 16","children":["$","path",null,{"fillRule":"evenodd","d":"M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"}]}],"返回首页"]}]}]]}]
+d:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+8:null
+11:{"metadata":[["$","title","0",{"children":"如何在 React 应用中实现钱包连接功能？"}],["$","meta","1",{"name":"description","content":"如何在 React 应用中实现钱包连接功能？ - Web3 前端面试题库"}],["$","link","2",{"rel":"icon","href":"/web3-interview-blog/favicon.ico","type":"image/x-icon","sizes":"16x16"}]],"error":null,"digest":"$undefined"}
+b:{"metadata":"$11:metadata","error":null,"digest":"$undefined"}
