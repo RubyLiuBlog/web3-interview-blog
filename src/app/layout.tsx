@@ -33,7 +33,7 @@ export default function RootLayout({
               <p>© {new Date().getFullYear()} Web3 前端面试题库 | 由社区共建</p>
               <p className="mt-2">
                 <a
-                  href="https://github.com/yourusername/web3-interview-blog"
+                  href="https://github.com/RubyLiuBlog/web3-interview-blog"
                   className="text-blue-500 hover:text-blue-700"
                 >
                   GitHub 仓库
